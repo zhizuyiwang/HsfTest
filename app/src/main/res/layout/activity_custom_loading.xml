@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hsf.hsftest.activity.customview.loading.CustomLoadingActivity">
+    <TextView
+        android:id="@+id/tv_custom_loading1"
+        android:layout_margin="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="20sp"
+        android:text="仿饿了么自定义加载控件"/>
+    <TextView
+        android:id="@+id/tv_custom_loading2"
+        android:layout_margin="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="20sp"
+        android:text="模仿小米的进度控件加载"/>
+    <TextView
+        android:id="@+id/tv_custom_loading3"
+        android:layout_margin="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="20sp"
+        android:text="酷炫加载对话框"/>
+</LinearLayout>

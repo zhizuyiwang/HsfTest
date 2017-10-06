@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<gradient   渐变
+        //渐变角度
+        android:angle="integer"
+        //渐变中心x
+        android:centerX="integer"
+        //渐变中心y
+        android:centerY="integer"
+        //渐变中心color
+        android:centerColor="color"
+        //渐变结束后color
+        android:endColor="color"
+        //渐变半径跟android:type搭配用
+        android:gradientRadius="integer"
+        //渐变开始color
+        android:startColor="color"
+        //渐变类型 默认是线性渐变，第二个是半径 sweep圆形渐变
+        android:type=["linear" | "radial" | "sweep"]
+        如果在LevelListDrawable中使用，则为true
+        android:useLevel=["true" | "false"] />-->
+    <gradient
+        android:startColor="#aa909090"
+        android:endColor="#ffd7d7d7"
+        android:angle="270"/>
+</shape>

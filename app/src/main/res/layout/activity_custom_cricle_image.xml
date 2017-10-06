@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hsf.hsftest.image.circleimage.CustomCircleImageActivity">
+
+    <com.hsf.hsftest.weight.RoundImageView
+        android:id="@+id/roundImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="30dp"
+        android:src="@drawable/pic6" />
+
+    <com.hsf.hsftest.weight.RoundImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="30dp"
+        android:src="@drawable/pic8"
+        app:borderColor="@color/colorPrimary"
+        app:borderWidth="1.5dp"
+        app:imageType="circle" />
+    <com.hsf.hsftest.weight.RoundImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="30dp"
+        android:src="@drawable/pic12"
+        app:borderColor="@color/colorAccent"
+        app:borderWidth="1.5dp"
+        app:imageType="round" />
+</LinearLayout>

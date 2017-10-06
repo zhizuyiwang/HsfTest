@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hsf.hsftest.activity.image.ViewFlipperActivity">
+    <com.hsf.hsftest.weight.TitleView
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_method_one"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height_normal"
+        android:layout_margin="@dimen/margin_normal"
+        android:background="@drawable/btn_blue_selector"
+        android:text="第一种方式"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_normal" />
+
+    <Button
+        android:id="@+id/btn_method_two"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height_normal"
+        android:layout_margin="@dimen/margin_normal"
+        android:background="@drawable/btn_blue_selector"
+        android:text="第二种方式"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_normal" />
+
+</LinearLayout>

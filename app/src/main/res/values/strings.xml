@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">HsfTest</string>
+    <string name="single_image">单图</string>
+    <string name="multi_images">多图</string>
+    <string name="choose_pictures">选择图片</string>
+    <string name="take_photo">拍照</string>
+    <string name="scale_type">ScaleType</string>
+    <string name="background">背景</string>
+    <string name="scale_value">缩放</string>
+    <string name="phone_number">电话号码</string>
+    <string name="bank_card_number">银行卡号</string>
+    <string name="please_enter_content">请输入内容</string>
+    <string name="identity_number">身份证号</string>
+    <string name="title">TextView多文本折叠/展开效果</string>
+    <string name="loading">正在加载中，请稍后...</string>
+    <string name="expand">展开</string>
+    <string name="collapse">收起</string>
+    <string name="like">喜欢</string>
+    <string name="dislike">不感兴趣</string>
+    <string name="viewpager_indicator">%1$d/%2$d</string>
+    <array name="nickName">
+        <item>你好</item>
+        <item>你好</item>
+        <item>你好</item>
+        <item>你好</item>
+        <item>你好</item>
+        <item>你好</item>
+        <item>你好</item>
+        <item>你好</item>
+        <item>你好</item>
+        <item>你好</item>
+        <item>你好</item>
+        <item>你好</item>
+        <item>你好</item>
+    </array>
+    <array name="signature">
+        <item>你好</item>
+        <item>你好</item>
+        <item>你好</item>
+        <item>你好</item>
+        <item>你好</item>
+        <item>你好</item>
+        <item>你好</item>
+        <item>你好</item>
+        <item>你好</item>
+        <item>你好</item>
+        <item>你好</item>
+        <item>你好</item>
+        <item>你好</item>
+    </array>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="click_retry">click to retry</string>
+    <string name="xlistview_header_hint_normal">Pull to refresh</string>
+    <string name="xlistview_header_hint_ready">release to refresh</string>
+    <string name="xlistview_header_hint_loading">loading...</string>
+    <string name="xlistview_header_hint_have_bottom_line">I hava the bottom line</string>
+    <string name="last_page_tips">已经是最后一页了</string>
+</resources>

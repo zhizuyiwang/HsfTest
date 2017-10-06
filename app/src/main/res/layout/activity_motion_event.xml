@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello World, EventTest-Default" />
+
+    <com.hsf.hsftest.weight.MyViewGroup
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:background="#cccccc"
+        android:layout_gravity="center"
+        android:gravity="center" >
+        <com.hsf.hsftest.weight.MyView
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:background="#451c0a" />
+    </com.hsf.hsftest.weight.MyViewGroup>
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="测试触摸事件"/>
+
+
+</LinearLayout>

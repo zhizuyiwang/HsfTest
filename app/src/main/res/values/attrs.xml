@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PayPsdInputView">
+
+        <attr name="maxCount" format="integer" />
+        <attr name="circleColor" format="color" />
+        <attr name="bottomLineColor" format="color" />
+        <attr name="radius1" format="dimension" />
+        <attr name="divideLineWidth" format="dimension" />
+        <attr name="divideLineColor" format="color" />
+        <attr name="rectAngle" format="dimension" />
+        <attr name="focusedColor" format="color"/>
+        <attr name="psdType" format="enum">
+            <enum name="weChat" value="0" />
+            <enum name="bottomLine" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CircleProgressBarView">
+
+        <attr name="circleBgStrokeWidth" format="dimension" />
+        <attr name="progressStrokeWidth" format="dimension" />
+
+        <attr name="circleBgColor" format="color" />
+        <attr name="progressColor" format="color" />
+
+        <attr name="circleAnimationDuration" format="integer" />
+
+        <attr name="isDrawCenterProgressText" format="boolean" />
+
+        <attr name="centerProgressTextColor" format="color"/>
+        <attr name="centerProgressTextSize" format="dimension"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="RadarWaveView">
+
+        <attr name="waveColor" format="color" />
+
+        <attr name="waveAmplitude" format="dimension" />
+
+        <attr name="waveSpeed" format="float" />
+
+        <attr name="waveStartPeriod" format="float" />
+        <attr name="waveStart" format="boolean" />
+
+        <attr name="waveFillTop" format="boolean" />
+        <attr name="waveFillBottom" format="boolean" />
+
+        <attr name="waveFillType" format="enum">
+            <enum name="top" value="0" />
+            <enum name="bottom" value="1" />
+        </attr>
+
+        <attr name="waveType" format="enum">
+            <enum name="sin" value="0" />
+            <enum name="cos" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="RoundImageView">
+        <!-- 显示类型 -->
+        <attr name="imageType" format="enum">
+            <enum name="circle" value="0" />
+            <enum name="round" value="1" />
+        </attr>
+        <!-- 边框大小 -->
+        <attr name="borderWidth" format="dimension" />
+        <!-- 边框颜色 -->
+        <attr name="borderColor" format="color" />
+        <!-- 圆角大小 -->
+        <attr name="roundRadius" format="dimension" />
+        <!-- 按下状态蒙层颜色 -->
+        <attr name="coverColor" format="color" />
+        <!-- 是否可被按下 -->
+        <attr name="isPressed" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="IntensifyImageView">
+        <attr name="scaleType" format="enum">
+            <enum name="fitAuto" value="1" />
+            <enum name="fitCenter" value="2" />
+        </attr>
+        <attr name="animateScaleType" format="boolean" />
+        <attr name="maximumScale" format="float" />
+        <attr name="minimumScale" format="float" />
+        <attr name="scale" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="ContentWithSpaceEditText">
+        <attr name="type" format="enum">
+            <enum name="phone" value="0" />
+            <enum name="card" value="1" />
+            <enum name="IDCard" value="2" />
+        </attr>
+    </declare-styleable>
+    
+    <declare-styleable name="NumberRollingView">
+        <!--帧数-->
+        <attr name="frameNum" format="integer"></attr>
+        <!--内容的格式-->
+        <attr name="textType">
+            <enum name="money" value="0"></enum>
+            <enum name="num" value="1"></enum>
+        </attr>
+        <!--是否设置每三位数字一个逗号-->
+        <attr name="useCommaFormat" format="boolean"></attr>
+        <!--是否当内容改变的时候使用动画，反之则不使用动画-->
+        <attr name="runWhenChange" format="boolean"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="MoreTextStyle">
+        <!--内容大小-->
+        <attr name="textSize" format="dimension" />
+        <!--内容颜色-->
+        <attr name="textColor" format="color" />
+        <!--内容默认最大行数-->
+        <attr name="maxLine" format="integer" />
+        <!--展开/收起图标-->
+        <attr name="expandIcon" format="reference" />
+        <!--展开/收起动画执行时间-->
+        <attr name="durationMillis" format="integer" />
+        <!--可点击区域，默认展开/收起区域可点击-->
+        <attr name="clickAll" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ExpandableTextView">
+        <!--内容默认最大行数，超过隐藏-->
+        <attr name="maxCollapsedLines" format="integer" />
+        <!--展开/收起动画执行时间-->
+        <attr name="animDuration" format="integer" />
+        <!--展开图片-->
+        <attr name="expandDrawable" format="reference" />
+        <!--收起图片-->
+        <attr name="collapseDrawable" format="reference" />
+        <!--内容颜色-->
+        <attr name="contentTextColor" format="color" />
+        <!--内容大小-->
+        <attr name="contentTextSize" format="dimension" />
+        <!--收起/展开颜色-->
+        <attr name="collapseExpandTextColor" format="color" />
+        <!--收起/展开大小-->
+        <attr name="collapseExpandTextSize" format="dimension" />
+        <!--收起文字-->
+        <attr name="textCollapse" format="string" />
+        <!--展开文字-->
+        <attr name="textExpand" format="string" />
+        <!--可点击区域，默认展开/收起区域可点击-->
+        <attr name="allClickable" format="boolean" />
+        <!--是否显示展开/收起图标，默认显示-->
+        <attr name="isDisplayIcon" format="boolean" />
+        <!--收起/展开位置，默认左边-->
+        <attr name="collapseExpandGrarity">
+            <flag name="left" value="3" />
+            <flag name="right" value="5" />
+        </attr>
+        <!--收起/展开图标位置，默认右边-->
+        <attr name="drawableGrarity">
+            <flag name="left" value="3" />
+            <flag name="right" value="5" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="StateButton">
+        <!--text color-->
+        <attr name="normalTextColor" format="color|reference"/>
+        <attr name="pressedTextColor" format="color|reference"/>
+        <attr name="unableTextColor" format="color|reference"/>
+
+        <!--stroke width and color, dash width, dash gap-->
+        <attr name="strokeDashWidth" format="dimension|reference"/>
+        <attr name="strokeDashGap" format="dimension|reference"/>
+        <attr name="normalStrokeWidth" format="dimension|reference"/>
+        <attr name="pressedStrokeWidth" format="dimension|reference"/>
+        <attr name="unableStrokeWidth" format="dimension|reference"/>
+        <attr name="normalStrokeColor" format="color|reference"/>
+        <attr name="pressedStrokeColor" format="color|reference"/>
+        <attr name="unableStrokeColor" format="color|reference"/>
+
+        <!--background color-->
+        <attr name="normalBackgroundColor" format="color|reference"/>
+        <attr name="pressedBackgroundColor" format="color|reference"/>
+        <attr name="unableBackgroundColor" format="color|reference"/>
+
+        <!--background radius-->
+        <attr name="radius" format="dimension|reference"/>
+        <attr name="round" format="boolean|reference"/>
+
+        <!--animation duration-->
+        <attr name="animationDuration" format="integer|reference"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="StateImageView">
+        <attr name="normalBackground" format="color|reference"/>
+        <attr name="pressedBackground" format="color|reference"/>
+        <attr name="unableBackground" format="color|reference"/>
+
+        <!--animation duration-->
+        <attr name="AnimationDuration" format="integer|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="SRecyclerView">
+        <attr name="mode">
+            <enum name="list" value="0"></enum>
+            <enum name="waterfall" value="1"></enum>
+        </attr>
+    </declare-styleable>
+</resources>

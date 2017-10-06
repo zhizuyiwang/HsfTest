@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--android:autoStart：设置自动加载下一个View
+    android:flipInterval：设置View之间切换的时间间隔
+    android:inAnimation：设置切换View的进入动画
+    android:outAnimation：设置切换View的退出动画-->
+    <ViewFlipper
+        android:id="@+id/vf_help"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:flipInterval="3000"
+        android:autoStart="false"
+        android:inAnimation="@anim/right_in"
+        android:outAnimation="@anim/left_out">
+        <include layout="@layout/page_help_one" />
+        <include layout="@layout/page_help_two" />
+        <include layout="@layout/page_help_three" />
+        <include layout="@layout/page_help_four" />
+    </ViewFlipper>
+</LinearLayout>

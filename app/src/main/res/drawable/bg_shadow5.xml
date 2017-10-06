@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--实现一个带边框的xml-->
+
+    <!--填充内容-->
+    <solid android:color="@android:color/transparent" />
+
+    <!--描边-->
+    <stroke
+        android:width="1dp"
+        android:color="#FFFF0000" />
+
+    <!--圆角-->
+    <corners android:radius="2dp" />
+</shape>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hsf.hsftest.design.recycler.RecyclerViewControlActivity">
+    <TextView
+        android:id="@+id/tv_recycler_flush_loading"
+        android:layout_margin="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="20sp"
+        android:text="recyclerView的刷新加载"/>
+    <TextView
+        android:id="@+id/tv_recycler_multi_item"
+        android:layout_margin="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="20sp"
+        android:text="recyclerView的多布局实现"/>
+    <TextView
+        android:id="@+id/tv_recycler_layout_manager"
+        android:layout_margin="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="20sp"
+        android:text="recyclerView的布局管理器"/>
+    <TextView
+        android:id="@+id/tv_recycler_suspension"
+        android:layout_margin="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="20sp"
+        android:text="recyclerView悬浮头部标题"/>
+
+    <TextView
+        android:id="@+id/tv_recycler_down_load"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="20sp"
+        android:text="recyclerView每一项需要下载文件"
+        android:textSize="20sp" />
+</LinearLayout>

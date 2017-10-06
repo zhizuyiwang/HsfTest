@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hsf.hsftest.MediaPlayerActivity"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_audio"
+        android:layout_margin="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="20sp"
+        android:text="录音、播放录音大全"/>
+    <TextView
+        android:id="@+id/tv_video"
+        android:layout_margin="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="20sp"
+        android:text="视频录制、播放大全"/>
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hsf.hsftest.image.drawable.DrawableHandleActivtiy">
+    <TextView
+        android:id="@+id/tv_clip_drawable"
+        android:layout_margin="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="20sp"
+        android:text="ClipDrawable实现录音效果"/>
+    <TextView
+        android:id="@+id/tv_rotate_Drawable"
+        android:layout_margin="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="20sp"
+        android:text="RotateDrawable实现音乐唱片机效果"/>
+</LinearLayout>

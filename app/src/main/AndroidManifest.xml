@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hsf.hsftest">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- HMS-SDK引导升级HMS功能，访问OTA服务器需要网络权限 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- HMS-SDK引导升级HMS功能，保存下载的升级包需要SD卡写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 检测网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 检测wifi状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 为了获取用户手机的IMEI，用来唯一的标识用户。 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".comment.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!-- value的值“appid”用实际申请的应用ID替换，来源于开发者联盟网站应用的权益详情。 -->
+        <meta-data
+            android:name="com.huawei.hms.client.appid"
+            android:value="100098739" />
+
+        <activity
+            android:name="com.huawei.hms.activity.BridgeActivity"
+            android:configChanges="orientation|locale|screenSize|layoutDirection|fontScale"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent">
+            <meta-data
+                android:name="hwc-theme"
+                android:value="androidhwext:style/Theme.Emui.Translucent" />
+        </activity>
+        <!-- “xxx.xxx.xxx”用实际的应用包名替换 -->
+        <provider
+            android:name="com.huawei.hms.update.provider.UpdateProvider"
+            android:authorities="com.hsf.hsftest.hms.update.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" />
+
+        <receiver android:name="com.huawei.hms.support.api.push.PushEventReceiver">
+            <intent-filter>
+
+                <!-- 接收通道发来的通知栏消息，兼容老版本PUSH -->
+                <action android:name="com.huawei.intent.action.PUSH" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receiver.HuaWeiPushReceiver">
+            <intent-filter>
+
+                <!-- 必须,用于接收token -->
+                <action android:name="com.huawei.android.push.intent.REGISTRATION" />
+                <!-- 必须，用于接收消息 -->
+                <action android:name="com.huawei.android.push.intent.RECEIVE" />
+                <action android:name="com.huawei.android.push.intent.CLICK" />
+                <!-- 可选，查看push通道是否连接，不查看则不需要 -->
+                <action android:name="com.huawei.intent.action.PUSH_STATE" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".text.activity.TextRunningActivity" />
+        <activity android:name=".activity.view.MotionEventActivity" />
+        <activity android:name=".activity.input.SoftInputMethodActivity" />
+        <activity android:name=".activity.shade.ShadeLayoutActivity" />
+        <activity android:name=".activity.shade.CrazyShadowActivity" />
+        <activity android:name=".text.TextViewActivity" />
+        <activity android:name=".activity.shade.ShapeCustom" />
+        <activity android:name=".text.activity.AutoCompleteTextViewActivity" />
+        <activity android:name=".text.activity.SuperTextViewActivity" />
+        <activity android:name=".image.PullToZoomActivity" />
+        <activity
+            android:name=".activity.customview.CustomViewActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.hsf.hsftest"
+                    android:path="/push_detail"
+                    android:scheme="myscheme" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.customview.CustomCommitButtonActivity" />
+        <activity android:name=".activity.customview.CustomTextViewActivity" />
+        <activity android:name=".activity.customview.bezier.CustomLoveActivity" />
+        <activity android:name=".activity.customview.bezier.CustomLovePetalActivity" />
+        <activity android:name=".activity.customview.CustomPassWordActivity" />
+        <activity android:name=".activity.customview.ProgressBarActivityActivity" />
+        <activity android:name=".activity.customview.bezier.CustomSinWaterRippleActivity" />
+        <activity android:name=".activity.customview.bezier.CustomBezierWaterRippleActivity" />
+        <activity android:name=".rx.RxJavaActivity" />
+        <activity android:name=".design.MaterialDesignActivity" />
+        <activity android:name=".activity.customview.bezier.CustomLoveLineActivity" />
+        <activity
+            android:name=".activity.customview.CustomSnowActivity"
+            android:theme="@style/AppTheme.NoStatusBar" />
+        <activity android:name=".image.ImageHandleActivity" />
+        <activity android:name=".image.circleimage.CustomCircleImageActivity" />
+        <activity android:name=".image.big.BigPictureLoadingActivity" />
+        <activity android:name=".image.big.SinglePreviewActivity" />
+        <activity android:name=".image.big.MultiPreviewActivity" />
+        <activity android:name=".activity.customview.bezier.BezierLineActivity" />
+        <activity android:name=".activity.customview.bezier.TwoBezierLineActivity" />
+        <activity android:name=".activity.customview.bezier.ThreeBezierLineActivity" />
+        <activity android:name=".kotlin.KotlinActivity">
+
+            <!--
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            -->
+        </activity>
+        <activity android:name=".text.activity.EnterLineActivity" />
+        <activity android:name=".design.recycler.RecyclerViewControlActivity" />
+        <activity android:name=".activity.customview.card.CustomDrawerCardActivity" />
+        <activity android:name=".activity.customview.card.CustomDrawerCardActivity2" />
+        <activity android:name=".activity.customview.card.CustomDrawerCardActivity1" />
+        <activity android:name=".text.activity.SpaceEditTextActivity" />
+        <activity android:name=".text.activity.NumberRollingTextViewActivity" />
+        <activity android:name=".text.activity.MoreLineExpandActivity" />
+        <activity android:name=".text.activity.ExpandableTextViewActivity" />
+        <activity android:name=".image.viewfipper.ViewFlipperActivity" />
+        <activity android:name=".image.viewfipper.ViewFlipperMethod1Activity" />
+        <activity android:name=".image.viewfipper.ViewFlipperMethod2Activity" />
+        <activity android:name=".dialog.DialogActivity" />
+        <activity android:name=".dialog.nicedialog.NiceDialogActivity" />
+        <activity android:name=".integration.IntegrationSDKActivity" />
+        <activity android:name=".design.recycler.referesh.activity.RefreshRecyclerActivity" />
+        <activity android:name=".design.recycler.referesh.activity.SwipeToLoadLayoutActivity" />
+        <activity android:name=".design.recycler.referesh.activity.CustomRecyclerViewActivity1" />
+        <activity android:name=".design.recycler.referesh.activity.CustomSwipeRefreshLayoutActivity" />
+        <activity android:name=".design.recycler.referesh.activity.CustomRefreshRecyclerViewActivity" />
+        <activity android:name=".design.recycler.referesh.activity.CustomRecyclerViewActivity2" />
+        <activity android:name=".design.recycler.referesh.activity.SwipeToLoadActivity1" />
+        <activity android:name=".design.recycler.referesh.ui.ElmRefreshActivity" />
+        <activity android:name=".design.recycler.referesh.ui.WeatherRefreshActivity" />
+        <activity android:name=".design.recycler.referesh.ui.WeiboRefreshActivity" />
+        <activity android:name=".design.recycler.referesh.ui.JDRefreshActivity" />
+        <activity android:name=".design.recycler.referesh.ui.BaiDuRefreshActivity" />
+        <activity android:name=".design.recycler.referesh.ui.MTWMRefreshActivity" />
+        <activity android:name=".design.recycler.referesh.ui.TianMaoRefreshActivity" />
+        <activity android:name=".image.imagezoom.activity.ImagePagerActivity" />
+        <activity android:name=".image.imagezoom.ZoomImageActivity" />
+        <activity android:name=".image.imagezoom.SpacePageActivity" />
+        <activity android:name=".image.imagezoom.ShowImageActivity" />
+        <activity android:name=".activity.customview.loading.CustomLoadingActivity" />
+        <activity android:name=".activity.customview.loading.BounceLoadingActivity" />
+        <activity android:name=".activity.customview.loading.GradeProgressActivity" />
+        <activity android:name=".text.activity.StateButtonActivity" />
+        <activity android:name=".design.recycler.referesh.activity.CustomSwipeRefreshActivity1" />
+        <activity android:name=".design.recycler.referesh.activity.CustomSwipeRefreshActivity2" />
+        <activity android:name=".design.recycler.referesh.activity.SwipeToLoadActivity2" />
+        <activity android:name=".image.scalelayout.ScaleActivity" />
+        <activity android:name=".image.scalelayout.scaleViewPager.ScaleViewPagerActivity" />
+        <activity android:name=".design.recycler.multiitem.MultiItemActivity" />
+        <activity android:name=".MediaPlayerActivity" />
+        <activity android:name=".image.drawable.DrawableHandleActivtiy" />
+        <activity android:name=".image.drawable.WyMusicActivity" />
+        <activity android:name=".activity.customview.loading.DialogLoadingActivity" />
+        <activity android:name=".design.recycler.referesh.activity.CustomRecyclerViewActivity3" />
+        <activity android:name=".design.recycler.referesh.activity.CustomRecyclerViewActivity4" />
+        <activity android:name=".design.recycler.referesh.activity.CustomRecyclerViewActivity5" />
+        <activity android:name=".text.activity.AutoEnterLineActivity" />
+        <activity android:name=".design.recycler.referesh.activity.CustomSwipeRefreshActivity3" />
+        <activity android:name=".design.recycler.referesh.activity.CustomRecyclerViewActivity6"></activity>
+    </application>
+
+</manifest>

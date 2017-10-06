@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hsf.hsftest.activity.shade.ShadeLayoutActivity">
+    <!--直接使用属性： Android:elevation="4dp"这样一句代码，就实现了效果，elevation表示海拔，
+        就是布局的z轴的高度，调整高度，可以选择阴影的轻重。-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:elevation="4dp"
+        android:translationZ="5dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="直接使用属性,我是文字，我是文字"/>
+        <!--通过写一个xml来实现的-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/bg_shadow1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="通过xml文件实现阴影效果"/>
+    </RelativeLayout>
+
+    <!--阴影可以用代码控制
+    首先被施加阴影的控件或布局一定要有设置背景
+    final ShadowLayout shadowLayout = (ShadowLayout) findViewById(R.id.sl);
+    shadowLayout.setIsShadowed(true);
+    shadowLayout.setShadowAngle(45);//阴影角度
+    shadowLayout.setShadowRadius(20);//阴影半径
+    shadowLayout.setShadowDistance(30);//阴影距离
+    shadowLayout.setShadowColor(Color.DKGRAY);//阴影颜色-->
+    <com.gigamole.library.ShadowLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:sl_shadow_angle="270"
+        app:sl_shadow_color="#000"
+        app:sl_shadow_distance="2dp"
+        app:sl_shadow_radius="5dp"
+        app:sl_shadowed="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:text="通过三方库实现阴影效果" />
+    </com.gigamole.library.ShadowLayout>
+
+</LinearLayout>

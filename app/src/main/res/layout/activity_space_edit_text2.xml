@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_bg"
+    android:orientation="vertical">
+
+    <com.hsf.hsftest.weight.TitleView
+        android:id="@+id/titleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_normal"
+        android:layout_margin="@dimen/margin_normal"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/btn_width_normal"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/phone_number"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/font_normal" />
+
+        <com.hsf.hsftest.text.view.ContentWithSpaceEditText
+            android:id="@+id/edt_phone_input"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_normal"
+            android:background="@color/white"
+            android:gravity="center"
+            android:hint="@string/please_enter_content"
+            android:inputType="number"
+            android:textColor="@color/blue"
+            android:textColorHint="@color/gray"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/font_normal"
+            app:type="phone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_normal"
+        android:layout_margin="@dimen/margin_normal"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/btn_width_normal"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/bank_card_number"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/font_normal" />
+
+        <com.hsf.hsftest.text.view.ContentWithSpaceEditText
+            android:id="@+id/edt_bank_card_input"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_normal"
+            android:background="@color/white"
+            android:gravity="center"
+            android:hint="@string/please_enter_content"
+            android:inputType="number"
+            android:textColor="@color/blue"
+            android:textColorHint="@color/gray"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/font_normal"
+            app:type="card" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_normal"
+        android:layout_margin="@dimen/margin_normal"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/btn_width_normal"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/identity_number"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/font_normal" />
+
+        <com.hsf.hsftest.text.view.ContentWithSpaceEditText
+            android:id="@+id/edt_identity_input"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_normal"
+            android:background="@color/white"
+            android:gravity="center"
+            android:hint="@string/please_enter_content"
+            android:inputType="number"
+            android:textColor="@color/blue"
+            android:textColorHint="@color/gray"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/font_normal"
+            app:type="IDCard" />
+    </LinearLayout>
+</LinearLayout>

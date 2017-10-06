@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dialog.DialogActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_nice_dialog"
+            android:layout_margin="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="20sp"
+            android:text="NiceDialog的使用"/>
+        <TextView
+            android:id="@+id/tv_animation_dialog"
+            android:layout_margin="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="20sp"
+            android:text="带有动画的Dialog"/>
+        <TextView
+            android:id="@+id/tv_view_page_dialog"
+            android:layout_margin="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="20sp"
+            android:text="实现图片Dialog中带ViewPager"/>
+
+    </LinearLayout>
+
+</ScrollView>

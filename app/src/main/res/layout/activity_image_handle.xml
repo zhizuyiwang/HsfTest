@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hsf.hsftest.image.ImageHandleActivity">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_take_photo"
+            android:layout_margin="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="20sp"
+            android:text="选择上传头像用法大全"/>
+        <TextView
+            android:id="@+id/tv_image_pull_to_zoom"
+            android:layout_margin="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="20sp"
+            android:text="头像下拉缩放动效"/>
+        <TextView
+            android:id="@+id/tv_select_image_loading"
+            android:layout_margin="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="20sp"
+            android:text="选择头像加载"/>
+        <TextView
+            android:id="@+id/tv_circle_image"
+            android:layout_margin="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="20sp"
+            android:text="自定义圆形、圆角矩形View"/>
+
+        <TextView
+            android:id="@+id/tv_big_picture"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="20sp"
+            android:text="Android 大图预览、高效大图加载"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/tv_view_flipper"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="20sp"
+            android:text="ViewFlipper(翻转视图)使用详解"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/tv_view_preview"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="20sp"
+            android:text="Android图片预览的拖拽缩放"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/tv_scale_layout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="20sp"
+            android:text="模仿小米相册查看图片效果"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/tv_drawable"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="20sp"
+            android:text="各种Drawable的用法"
+            android:textSize="20sp" />
+    </LinearLayout>
+</ScrollView>

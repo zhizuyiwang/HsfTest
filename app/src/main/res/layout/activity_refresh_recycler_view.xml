@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".design.recycler.referesh.activity.RefreshRecyclerActivity">
+
+    <TextView
+        android:id="@+id/tv_refresh_load"
+        android:layout_margin="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="20sp"
+        android:text="自定义RecyclerView实现刷新加载"/>
+    <TextView
+        android:id="@+id/tv_refresh_load1"
+        android:layout_margin="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="20sp"
+        android:text="SwipeRefreshLayout实现刷新加载"/>
+    <TextView
+        android:id="@+id/tv_refresh_load2"
+        android:layout_margin="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="20sp"
+        android:text="SwipeToLoadLayout实现刷新加载"/>
+
+</LinearLayout>
