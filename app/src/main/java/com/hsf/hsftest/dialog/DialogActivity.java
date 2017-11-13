@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.hsf.hsftest.R;
 import com.hsf.hsftest.dialog.nicedialog.NiceDialogActivity;
+import com.hsf.hsftest.dialog.pagedialog.PageDialogActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -39,7 +40,7 @@ public class DialogActivity extends AppCompatActivity {
 
                 break;
             case R.id.tv_view_page_dialog:
-                //http://www.jianshu.com/p/584b27952dc3
+                startActivity(new Intent(this, PageDialogActivity.class));
                 break;
         }
     }

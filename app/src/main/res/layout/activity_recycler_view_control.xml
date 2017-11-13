@@ -13,6 +13,13 @@
         android:textSize="20sp"
         android:text="recyclerView的刷新加载"/>
     <TextView
+        android:id="@+id/tv_recycler_suspension"
+        android:layout_margin="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="20sp"
+        android:text="recyclerView悬浮头部标题"/>
+    <TextView
         android:id="@+id/tv_recycler_multi_item"
         android:layout_margin="20sp"
         android:layout_width="match_parent"
@@ -26,13 +33,7 @@
         android:layout_height="30dp"
         android:textSize="20sp"
         android:text="recyclerView的布局管理器"/>
-    <TextView
-        android:id="@+id/tv_recycler_suspension"
-        android:layout_margin="20sp"
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
-        android:textSize="20sp"
-        android:text="recyclerView悬浮头部标题"/>
+
 
     <TextView
         android:id="@+id/tv_recycler_down_load"

@@ -51,6 +51,8 @@ public class CustomViewActivity extends AppCompatActivity {
     TextView tvCustomQqMessage;
     @BindView(R.id.tv_custom_wy_music)
     TextView tvCustomWyMusic;
+    @BindView(R.id.tv_custom_horizontal_progress2)
+    TextView tvCustomHorizontalProgress2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,16 +62,16 @@ public class CustomViewActivity extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("myscheme://com.hsf.hsftest/push_detail?message=what"));
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         String intentUri = intent.toUri(Intent.URI_INTENT_SCHEME);
-        Log.i("HuaweiPushRevicer","action是:" + intentUri);
+        Log.i("HuaweiPushRevicer", "action是:" + intentUri);
         Intent intent1 = getIntent();
-       int ww =  intent1.getIntExtra("kkk",0);
-        Log.i("HuaweiPushRevicer","kkk:" + ww);
+        int ww = intent1.getIntExtra("kkk", 0);
+        Log.i("HuaweiPushRevicer", "kkk:" + ww);
     }
 
     @OnClick({R.id.tv_custom_commit_btn, R.id.tv_custom_text, R.id.tv_custom_love, R.id.tv_custom_love_password,
             R.id.tv_custom_horizontal_progress, R.id.tv_custom_sin_water_ripple, R.id.tv_custom_bezier_water_ripple,
             R.id.tv_custom_love_line, R.id.tv_custom_snow, R.id.tv_bezier_line, R.id.tv_custom_card, R.id.tv_custom_loading,
-            R.id.tv_custom_qq_message, R.id.tv_custom_wy_music})
+            R.id.tv_custom_qq_message, R.id.tv_custom_wy_music,R.id.tv_custom_horizontal_progress2})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_custom_commit_btn:
@@ -86,6 +88,9 @@ public class CustomViewActivity extends AppCompatActivity {
                 break;
             case R.id.tv_custom_horizontal_progress:
                 startActivity(new Intent(this, ProgressBarActivityActivity.class));
+                break;
+            case R.id.tv_custom_horizontal_progress2:
+                startActivity(new Intent(this,ProgressBarActivityActivity2.class));
                 break;
             case R.id.tv_custom_sin_water_ripple:
                 startActivity(new Intent(this, CustomSinWaterRippleActivity.class));
@@ -117,4 +122,7 @@ public class CustomViewActivity extends AppCompatActivity {
         }
     }
 
+    @OnClick()
+    public void onViewClicked() {
+    }
 }

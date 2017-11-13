@@ -8,7 +8,7 @@
     android:background="@android:color/white"
     android:orientation="vertical">
 
-    <com.hsf.hsftest.activity.image.big.intensifyimage.IntensifyImageView
+    <com.hsf.hsftest.image.big.intensifyimage.IntensifyImageView
         android:id="@+id/intensify_image"
         android:layout_width="match_parent"
         android:layout_height="0dp"

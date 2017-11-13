@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hsf.hsftest.image.scrollview.customscrollview.CustomScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hsf.hsftest.image.scrollview.activity.ZoomInScrollViewActivity5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:background="@color/accent_color"
+            android:layout_height="150dp"
+            android:gravity="center"
+            android:textColor="@color/accent_color_night"
+            android:text="hhhhhhhh"/>
+
+    </LinearLayout>
+</com.hsf.hsftest.image.scrollview.customscrollview.CustomScrollView>

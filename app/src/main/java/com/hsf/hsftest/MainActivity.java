@@ -15,6 +15,7 @@ import com.hsf.hsftest.activity.view.MotionEventActivity;
 import com.hsf.hsftest.design.MaterialDesignActivity;
 import com.hsf.hsftest.dialog.DialogActivity;
 import com.hsf.hsftest.image.ImageHandleActivity;
+import com.hsf.hsftest.popup.PopupWindowActivity;
 import com.hsf.hsftest.text.TextViewActivity;
 import com.huawei.hms.api.ConnectionResult;
 import com.huawei.hms.api.HuaweiApiClient;
@@ -22,6 +23,7 @@ import com.huawei.hms.support.api.client.PendingResult;
 import com.huawei.hms.support.api.client.ResultCallback;
 import com.huawei.hms.support.api.push.HuaweiPush;
 import com.huawei.hms.support.api.push.TokenResult;
+import com.meizu.cloud.pushsdk.PushManager;
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.Logger;
 
@@ -77,6 +79,10 @@ public class MainActivity extends AppCompatActivity implements HuaweiApiClient.C
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         Logger.addLogAdapter(new AndroidLogAdapter());
+        PushManager.register(this,"111404","4f2117bd333749648b3b0aa071340d08");
+        Intent intent = getIntent();
+        String dd = intent.getStringExtra("kkk");
+        Log.e("MeiZuPushReceiver==kkk:",dd+"");
         client = new HuaweiApiClient.Builder(this)
                 .addApi(HuaweiPush.PUSH_API)
                 .addConnectionCallbacks(this)
@@ -88,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements HuaweiApiClient.C
     }
 
     @OnClick({R.id.tv_run_text, R.id.tv_soft_input_text, R.id.tv_permission_location, R.id.tv_motion_event,
-            R.id.tv_shape_layout, R.id.tv_custom_view, R.id.tv_material_design,
+            R.id.tv_shape_layout, R.id.tv_custom_view, R.id.tv_material_design,R.id.tv_popup,
             R.id.tv_rx_java, R.id.tv_select_wheel, R.id.tv_image_handle, R.id.tv_design_pattern,
             R.id.tv_dialog, R.id.tv_integration, R.id.tv_media})
     public void onViewClicked(View view) {
@@ -125,7 +131,9 @@ public class MainActivity extends AppCompatActivity implements HuaweiApiClient.C
                 startActivity(new Intent(this, DialogActivity.class));
                 break;
             case R.id.tv_popup:
-
+                startActivity(new Intent(this, PopupWindowActivity.class));
+              /*  Log.e("TAG","订阅魅族");
+                PushManager.register(this,"111404","4f2117bd333749648b3b0aa071340d08");*/
                 break;
             case R.id.tv_integration:
 
@@ -154,6 +162,13 @@ public class MainActivity extends AppCompatActivity implements HuaweiApiClient.C
                 //这边的结果只表明接口调用成功，是否能收到响应结果只在广播中接收
             }
         });
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        String dd = intent.getStringExtra("kkk");
+        Log.e("MeiZuPushReceiver==kkk:",dd+"");
     }
 
     @Override

@@ -13,8 +13,6 @@ import com.hsf.hsftest.weight.CircleProgressBarView;
 import com.hsf.hsftest.weight.HorizontalProgressBar;
 
 public class ProgressBarActivityActivity extends AppCompatActivity {
-
-
     CircleProgressBarView circleProgressBarView;
     HorizontalProgressBar horizontalProgressBar;
     TextView textView;

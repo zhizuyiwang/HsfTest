@@ -1,9 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.hsf.hsftest.activity.image.PullToZoomActivity"
     android:orientation="vertical">
-
+    <TextView
+        android:id="@+id/tv_custom_scroll_view1"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="20sp"
+        android:text="自定义ScrollView实现放大回弹效果"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/tv_custom_scroll_view2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="20sp"
+        android:text="仿ios可上提下拉的ScrollView"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/tv_custom_scroll_view3"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="20sp"
+        android:text="滑到头部或尾部可伸缩放大效果"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/tv_custom_scroll_view4"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="20sp"
+        android:text="上下拉伸回弹阻尼效果"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/tv_custom_scroll_view5"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="20sp"
+        android:text="高仿QQ的上下回弹效果"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/tv_custom_scroll_view6"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="20sp"
+        android:text="QQ空间阻尼下拉刷新和渐变菜单栏"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/tv_custom_scroll_view7"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="20sp"
+        android:text="自定义ListView实现渐变菜单栏"
+        android:textSize="20sp" />
 </LinearLayout>

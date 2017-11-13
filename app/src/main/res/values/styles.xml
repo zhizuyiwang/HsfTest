@@ -52,14 +52,68 @@
         <item name="android:windowEnterAnimation">@anim/enter_anim</item>
         <item name="android:windowExitAnimation">@anim/exit_anim</item>
     </style>
+
     <style name="EnterExitAnimation" parent="android:Animation">
         <item name="android:windowEnterAnimation">@anim/enter_anim</item>
         <item name="android:windowExitAnimation">@anim/exit_anim</item>
     </style>
+
     <style name="TextStyle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">#000</item>
         <item name="android:textSize">16sp</item>
     </style>
+
+    <style name="Clickable">
+        <item name="android:background">@drawable/clickable_background</item>
+    </style>
+
+    <style name="my_page_item_root" parent="@style/Clickable">
+        <item name="android:paddingLeft">15.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:background">?attr/main_bg</item>
+    </style>
+
+    <style name="my_page_item_divider">
+        <item name="android:background">@color/ssxinxian1</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.5dip</item>
+    </style>
+
+    <style name="my_page_item_right_arrow">
+        <item name="android:paddingRight">15.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@mipmap/setting_arrow</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="my_page_item_tv">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingTop">11.0dip</item>
+        <item name="android:paddingBottom">11.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="popupAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="pagerDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>    <!--背景变暗-->
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

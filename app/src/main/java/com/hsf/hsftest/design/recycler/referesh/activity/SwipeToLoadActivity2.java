@@ -1,11 +1,10 @@
 package com.hsf.hsftest.design.recycler.referesh.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 
 import com.aspsine.swipetoloadlayout.OnLoadMoreListener;
 import com.aspsine.swipetoloadlayout.OnRefreshListener;
@@ -40,8 +39,6 @@ public class SwipeToLoadActivity2 extends AppCompatActivity implements OnRefresh
                 super.onScrollStateChanged(recyclerView, newState);
                 int extent = recyclerView.computeVerticalScrollExtent();
                 int range = recyclerView.computeVerticalScrollRange();
-                Log.e("extent",extent+"");
-                Log.e("range",range+"");
                 if (range > extent) {
                     swipeToLoadLayout.setLoadMoreEnabled(true);
                 } else {

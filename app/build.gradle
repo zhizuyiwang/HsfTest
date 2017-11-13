@@ -10,6 +10,7 @@ android {
         targetSdkVersion 25
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -25,6 +26,8 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    compile project(path: ':imageselector')
+    compile project(path: ':groupedadapter')
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
@@ -42,8 +45,21 @@ dependencies {
     compile 'com.huawei.android.hms:push:2.5.2.300'
     compile 'com.nineoldandroids:library:2.4.0'
     compile 'com.chanven.lib:cptr:1.1.0'
+    compile 'com.meizu.flyme.internet:push-internal-publish:3.3.+@aar'
+    compile 'com.google.android.gms:play-services-maps:11.0.2'
+    compile 'com.google.android.gms:play-services:11.0.2'
+    compile 'com.squareup.picasso:picasso:2.5.2'
     testCompile 'junit:junit:4.12'
+    compile 'org.greenrobot:eventbus:3.1.1'
+
+    compile 'com.github.promeg:tinypinyin:1.0.0' // ~80KB
 }
 repositories {
     mavenCentral()
+    maven {
+        url 'https://maven.google.com/'
+        name 'Google'
+    }
 }
+
+apply plugin: 'kotlin-android-extensions'

@@ -14,21 +14,22 @@
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:textSize="20sp"
-            android:text="选择上传头像用法大全"/>
+            android:text="拍照、大图裁剪和小图裁剪"/>
+        <TextView
+            android:id="@+id/tv_image_selector"
+            android:layout_margin="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:textSize="20sp"
+            android:text="图片选择器"/>
         <TextView
             android:id="@+id/tv_image_pull_to_zoom"
             android:layout_margin="20sp"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:textSize="20sp"
-            android:text="头像下拉缩放动效"/>
-        <TextView
-            android:id="@+id/tv_select_image_loading"
-            android:layout_margin="20sp"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:textSize="20sp"
-            android:text="选择头像加载"/>
+            android:text="自定义ScrollView实现放大回弹效果"/>
+
         <TextView
             android:id="@+id/tv_circle_image"
             android:layout_margin="20sp"
@@ -71,6 +72,13 @@
             android:layout_height="30dp"
             android:layout_margin="20sp"
             android:text="各种Drawable的用法"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/tv_banner"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_margin="20sp"
+            android:text="轮播图的用法"
             android:textSize="20sp" />
     </LinearLayout>
 </ScrollView>

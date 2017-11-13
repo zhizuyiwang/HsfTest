@@ -1,6 +1,5 @@
 package com.hsf.hsftest.receiver;
 
-
 import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
@@ -84,6 +83,8 @@ public class HuaWeiPushReceiver extends PushReceiver {
             }
             String content = "收到通知附加消息:" + extras.getString(BOUND_KEY.pushMsgKey);
             Log.i(TAG, "消息点击事件得到通知附加消息:" + content);
+            String parar = "收到通知的参数:" + extras.getString("kkk");
+            Log.i(TAG, "收到通知的参数:" + parar);
         }
     }
 

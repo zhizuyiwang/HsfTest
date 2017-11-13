@@ -7,7 +7,7 @@ import android.widget.ImageView;
 /**
  * 正方形的ImageView
  */
-public class SquareImageView extends ImageView {
+public class SquareImageView extends android.support.v7.widget.AppCompatImageView {
 
     public SquareImageView(Context context) {
         super(context);

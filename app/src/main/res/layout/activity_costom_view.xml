@@ -39,6 +39,13 @@
             android:textSize="20sp"
             android:text="炫酷的水平进度条"/>
         <TextView
+            android:id="@+id/tv_custom_horizontal_progress2"
+            android:layout_margin="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:text="炫酷的进度条"/>
+        <TextView
             android:id="@+id/tv_custom_sin_water_ripple"
             android:layout_margin="20sp"
             android:layout_width="match_parent"

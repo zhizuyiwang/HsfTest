@@ -10,8 +10,7 @@
     <com.aspsine.swipetoloadlayout.SwipeToLoadLayout
         android:id="@+id/swipeToLoadLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="match_parent">
 
         <include
             android:id="@id/swipe_refresh_header"
@@ -25,7 +24,6 @@
             android:gravity="center"
             android:text="下拉刷新"
             android:textSize="24sp"/>
-
     </com.aspsine.swipetoloadlayout.SwipeToLoadLayout>
 
 </RelativeLayout>

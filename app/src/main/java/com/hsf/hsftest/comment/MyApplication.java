@@ -3,6 +3,8 @@ package com.hsf.hsftest.comment;
 import android.app.Application;
 import android.content.Context;
 
+import com.meizu.cloud.pushsdk.PushManager;
+
 /**
  * Created by Thinkpadx240 on 2017/9/5.
  */
@@ -14,6 +16,7 @@ public class MyApplication extends Application{
     public void onCreate() {
         super.onCreate();
         mContext = getApplicationContext();
+
     }
 
     public static Context getContext() {

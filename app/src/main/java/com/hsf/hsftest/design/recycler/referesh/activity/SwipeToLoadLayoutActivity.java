@@ -12,6 +12,14 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+/**
+ *@作者 hsf
+ *
+ *@创建日期 2017/11/7 10:44
+ *
+ * https://github.com/Aspsine/SwipeToLoadLayout
+ */
+
 public class SwipeToLoadLayoutActivity extends AppCompatActivity {
 
     @BindView(R.id.tv_swipe_to_load)

@@ -1,0 +1,99 @@
+1、http://www.cnblogs.com/tianzhijiexian/p/4059006.html
+详细解释如何通过Android自带的方式来实现图片的裁剪——原理分析+解决方案
+2、http://www.linuxidc.com/Linux/2012-11/73940p2.htm
+Android大图片裁剪终极解决方案
+3、http://blog.csdn.net/floodingfire/article/details/8144604
+Android大图片裁剪终极解决方案（上：原理分析）
+
+
+裁剪分为两种方式，一个是大图裁剪一个是小图裁剪，可以通过配置裁剪参数来实现。
+1、背景：由于Intent传递数据大小的限制，只允许传递不大于1M的数据，如果裁剪出的图片比较小，比如是
+    头像，就可以在裁剪结束直接返回数据，返回的就是Bitmap。但如果裁剪出的图片较大，比如背景图，大小超过
+    1M，这时就需要把裁剪出的图片存到一个文件中，并指定一个URI,我们可以根据这个URI来获取图片。
+2、不同的配置：
+        Intent intent = new Intent("com.android.camera.action.CROP");
+        intent.setDataAndType(uri, "image/*");//uri是拍照或选择照片的图片uri
+   大图裁剪：
+        intent.putExtra("crop", "true");
+        //裁剪框比例
+        intent.putExtra("aspectX", 2);
+        intent.putExtra("aspectY", 1);
+        //图片输出大小
+        intent.putExtra("outputX", 600);
+        intent.putExtra("outputY", 300);
+         //保持比例
+        intent.putExtra("scale", true);
+
+        //return-data为false，表示不输出数据，而是存到文件中，用URI指定
+        intent.putExtra("return-data", false);
+
+        //指定输出到的文件
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, outUri);
+
+        intent.putExtra("outputFormat", Bitmap.CompressFormat.JPEG.toString());
+        //不启用人脸识别
+        intent.putExtra("noFaceDetection", false);
+
+        startActivityForResult(intent,PHOTO_ALBUM_REQUEST);
+
+    最后在返回的结果里把uri转换成我们需要的位图：
+    Bitmap bitmap = BitmapFactory.decodeStream(context.getContentResolver().openInputStream(uri));
+
+
+    小图裁剪：
+           intent.putExtra("crop", "true");
+           //裁剪框比例
+           intent.putExtra("aspectX", 1);
+           intent.putExtra("aspectY", 1);
+           //图片输出大小
+           intent.putExtra("outputX", 200);
+           intent.putExtra("outputY", 200);
+            //保持比例
+           intent.putExtra("scale", true);
+
+           //return-data为true，表示输出数据
+           intent.putExtra("return-data", true);
+           intent.putExtra("outputFormat", Bitmap.CompressFormat.JPEG.toString());
+           //不启用人脸识别
+           intent.putExtra("noFaceDetection", false);
+           startActivityForResult(intent,PHOTO_ALBUM_REQUEST);
+     最后，通过Bundle extras = data.getExtras();
+               Bitmap photo = extras.getParcelable("data");
+           来获取所需要的位图
+
+3、裁剪的配置：
+
+    附加选项	数据类型	描述
+    crop	    String	发送裁剪信号
+    aspectX	    int	X方向上的比例
+    aspectY	    int	Y方向上的比例
+    outputX	    int	裁剪区的宽
+    outputY	    int	裁剪区的高
+    scale	    boolean	是否保留比例
+    return-data	    boolean	是否将数据保留在Bitmap中返回
+    data	    Parcelable	相应的Bitmap数据
+    circleCrop	    String	圆形裁剪区域？
+    MediaStore.EXTRA_OUTPUT ("output")	URI	将URI指向相应的file:///详见代码示例
+    outputFormat	    String	输出格式，一般设为Bitmap格式：Bitmap.CompressFormat.JPEG.toString()
+    noFaceDetection	    boolean	是否取消人脸识别功能
+
+【注意】我们在使用剪切图片的时候，通常我们设置属性只能设置一些比较小的值，
+    像intent.putExtra("outputX", 320);intent.putExtra("outputY", 320);剪切后图片的尺寸不能
+    设置为过大，经测试到640就会出现卡住的现象，为什么呢？原因是在于Intent 的data域最大传递
+    的值的大小约为1M，所以图片的BITMAP当超过1M时就会失败。通常我们只是设置头像可以用这个方法。
+
+那么如果我们要剪切显示一些比较大的图片呢？怎么做呢？
+    该方法就是先设置为return-data设为false，不从data域获取图片，而是越过这个桥梁，通过我们
+    刚刚在剪切图片后设置的路径目录和名称来单独获取这个图片，就可以完美显示了。如果不设置
+    return-data为false，那么就会默认通过data返回，从而造成卡住现像。
+
+return-data:是将结果保存在data中返回，在onActivityResult中，直接调用intent.getdata()
+    就可以获取值了，这里设为fase，就是不让它保存在data中
+
+MediaStore.EXTRA_OUTPUT：由于我们不让它保存在Intent的data域中，但我们总要有地方来保存
+    我们的图片，这个参数就是转移保存地址的，对应Value中保存的URI就是指定的保存地址。
+
+4、照相机拍完照后会返回或输出数据，输出的数据即为我们所需要的图片的数据，取到图片的数据后我们将它放入
+uri对象中，传递到裁剪界面去，为什么要用uri传递，是考虑到Android的内存问题，在有限的android内存
+分配下如果传递位图可能会出现内存溢出的异常，利用uri即可避免这种情况的发生
+

@@ -15,6 +15,7 @@ import com.hsf.hsftest.text.activity.NumberRollingTextViewActivity;
 import com.hsf.hsftest.text.activity.SpaceEditTextActivity;
 import com.hsf.hsftest.text.activity.StateButtonActivity;
 import com.hsf.hsftest.text.activity.SuperTextViewActivity;
+import com.hsf.hsftest.text.activity.TextLabelActivity;
 import com.hsf.hsftest.text.activity.TextRunningActivity;
 
 import butterknife.BindView;
@@ -46,6 +47,8 @@ public class TextViewActivity extends AppCompatActivity {
     TextView tvStateButton;
     @BindView(R.id.tv_auto_enter_line)
     TextView tvAutoEnterLine;
+    @BindView(R.id.tv_label)
+    TextView tvLabel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +58,7 @@ public class TextViewActivity extends AppCompatActivity {
     }
 
     @OnClick({R.id.tv_run_text, R.id.tv_aotu_text, R.id.tv_super_text, R.id.tv_enter_line, R.id.tv_space_et
-            , R.id.tv_number_view, R.id.tv_more_line_expand, R.id.tv_state_button,R.id.tv_auto_enter_line})
+            , R.id.tv_number_view, R.id.tv_more_line_expand, R.id.tv_state_button, R.id.tv_auto_enter_line,R.id.tv_label})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tv_run_text:
@@ -85,11 +88,9 @@ public class TextViewActivity extends AppCompatActivity {
             case R.id.tv_state_button:
                 startActivity(new Intent(this, StateButtonActivity.class));
                 break;
+            case R.id.tv_label:
+                startActivity(new Intent(this, TextLabelActivity.class));
+                break;
         }
-    }
-
-
-    @OnClick()
-    public void onViewClicked() {
     }
 }

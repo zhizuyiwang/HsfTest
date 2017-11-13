@@ -207,4 +207,61 @@
             <enum name="waterfall" value="1"></enum>
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+
+    <attr name="clickableBackground" format="reference"/>
+    <attr name="main_bg" format="reference|color"/>
+    <attr name="white_bg" format="reference|color"/>
+    <attr name="font_color" format="reference|color"/>
+    <attr name="font_color2" format="reference|color"/>
+    <attr name="font_red" format="reference|color"/>
+    <attr name="isColorUi" format="boolean"/>
+    <attr name="divider_black" format="reference|color"/>
+    <attr name="divider_light_grey" format="reference|color"/>
+
+    <declare-styleable name="IndexBar">
+        <attr name="textSize" />
+        <attr name="pressBackground" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="labels_view">
+        <attr name="selectType" format="enum">
+            <enum name="NONE" value="1" />
+            <enum name="SINGLE" value="2" />
+            <enum name="MULTI" value="3" />
+        </attr>
+        <attr name="maxSelect" format="integer"/>
+        <attr name="labelTextColor" format="reference" />
+        <attr name="labelTextSize" format="dimension" />
+        <attr name="labelTextPaddingLeft" format="dimension" />
+        <attr name="labelTextPaddingTop" format="dimension" />
+        <attr name="labelTextPaddingRight" format="dimension" />
+        <attr name="labelTextPaddingBottom" format="dimension" />
+        <attr name="lineMargin" format="dimension" />
+        <attr name="wordMargin" format="dimension" />
+        <attr name="labelBackground" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="custom_banner">
+        <attr name="indicatorGravity" format="enum">
+            <enum name="LEFT" value="1" />
+            <enum name="RIGHT" value="2" />
+            <enum name="CENTER" value="3" />
+        </attr>
+        <attr name="indicatorStyle" format="enum">
+            <enum name="NONE" value="1" />
+            <enum name="NUMBER" value="2" />
+            <enum name="ORDINARY" value="3" />
+        </attr>
+        <attr name="indicatorSelectRes" format="reference" />
+        <attr name="indicatorUnSelectRes" format="reference" />
+        <attr name="indicatorInterval" format="dimension" />
+    </declare-styleable>
+
 </resources>

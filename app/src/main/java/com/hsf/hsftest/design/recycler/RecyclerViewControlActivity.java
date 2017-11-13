@@ -9,6 +9,7 @@ import android.widget.TextView;
 import com.hsf.hsftest.R;
 import com.hsf.hsftest.design.recycler.multiitem.MultiItemActivity;
 import com.hsf.hsftest.design.recycler.referesh.activity.RefreshRecyclerActivity;
+import com.hsf.hsftest.design.recycler.stickheader.StickyHeaderActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -47,10 +48,10 @@ public class RecyclerViewControlActivity extends AppCompatActivity {
                 startActivity(new Intent(this, RefreshRecyclerActivity.class));
                 break;
             case R.id.tv_recycler_layout_manager:
+
                 break;
-
             case R.id.tv_recycler_suspension:
-
+                startActivity(new Intent(this, StickyHeaderActivity.class));
                 break;
             case R.id.tv_recycler_multi_item:
                 startActivity(new Intent(this, MultiItemActivity.class));
